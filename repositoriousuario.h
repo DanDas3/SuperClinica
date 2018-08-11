@@ -1,7 +1,7 @@
 #ifndef REPOSITORIOUSUARIO_H
 #define REPOSITORIOUSUARIO_H
 
-#include <vector>
+#include <QVector>
 #include "usuario.h"
 
 class RepositorioUsuario
@@ -9,13 +9,13 @@ class RepositorioUsuario
 public:
     RepositorioUsuario();
     RepositorioUsuario(int n);
-    RepositorioUsuario(std::vector<Usuario> u);
+    RepositorioUsuario(QVector<Usuario> u);
 
     void cadastrarUsuario(Usuario u);
-    Usuario& procurar(string id);
-    void remover(std::string id);
+    Usuario *procurar(QString id);
+    void remover(QString id);
 private:
-    std::vector<Usuario> usuarios;
+    QVector<Usuario> usuarios;
 };
 
 #endif // REPOSITORIOUSUARIO_H

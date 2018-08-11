@@ -1,7 +1,6 @@
 #ifndef MEDICO_H
 #define MEDICO_H
 
-#include <string>
 #include "usuario.h"
 
 using namespace std;
@@ -12,7 +11,7 @@ public:
     Medico();
 
 private:
-    string especialidade;
+    QString especialidade;
 };
 
 #endif // MEDICO_H

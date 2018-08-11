@@ -1,35 +1,34 @@
 #ifndef USUARIO_H
 #define USUARIO_H
 
-#include <string>
-using namespace std;
+#include <QString>
 
 class Usuario
 {
 public:
     Usuario();
 
-    string getNome() const;
-    void setNome(const string &value);
+    QString getNome() const;
+    void setNome(const QString &value);
 
-    string getCpf() const;
-    void setCpf(const string &value);
+    QString getCpf() const;
+    void setCpf(const QString &value);
 
     int getSenhaHash() const;
 
-    string getId() const;
-    void setId(const string &value);
+    QString getId() const;
+    void setId(const QString &value);
 
     int getIdade() const;
     void setIdade(int value);
 
-    bool operator ==(Usuario& b);
+    bool operator ==(const Usuario *a);
 
 private:
-    string nome;
-    string cpf;
+    QString nome;
+    QString cpf;
     int senhaHash;
-    string id;
+    QString id;
     int idade;
 
 };

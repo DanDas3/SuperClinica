@@ -5,12 +5,12 @@ Prontuario::Prontuario()
 
 }
 
-std::string Prontuario::getQueixaPaciente() const
+QString Prontuario::getQueixaPaciente() const
 {
     return queixaPaciente;
 }
 
-void Prontuario::setQueixaPaciente(const std::string &value)
+void Prontuario::setQueixaPaciente(const QString &value)
 {
     queixaPaciente = value;
 }

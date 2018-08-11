@@ -5,12 +5,12 @@ Cirurgia::Cirurgia()
 
 }
 
-string Cirurgia::getId() const
+QString Cirurgia::getId() const
 {
     return id;
 }
 
-void Cirurgia::setId(const string &value)
+void Cirurgia::setId(const QString &value)
 {
     id = value;
 }
@@ -55,12 +55,12 @@ void Cirurgia::setData(const QDate &value)
     data = value;
 }
 
-string Cirurgia::getTipoCirurgia() const
+QString Cirurgia::getTipoCirurgia() const
 {
     return tipoCirurgia;
 }
 
-void Cirurgia::setTipoCirurgia(const string &value)
+void Cirurgia::setTipoCirurgia(const QString &value)
 {
     tipoCirurgia = value;
 }

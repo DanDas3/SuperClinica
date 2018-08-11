@@ -1,7 +1,7 @@
 #ifndef PRONTUARIO_H
 #define PRONTUARIO_H
 
-#include <string>
+#include <QString>
 
 class Prontuario
 {
@@ -9,11 +9,11 @@ public:
     Prontuario();
 
 
-    std::string getQueixaPaciente() const;
-    void setQueixaPaciente(const std::string &value);
+    QString getQueixaPaciente() const;
+    void setQueixaPaciente(const QString &value);
 
 private:
-    std::string queixaPaciente;
+    QString queixaPaciente;
 };
 
 #endif // PRONTUARIO_H

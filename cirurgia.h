@@ -2,7 +2,6 @@
 #define CIRURGIA_H
 
 #include "medico.h"
-#include <string>
 #include <QDate>
 
 class Paciente;
@@ -12,8 +11,8 @@ class Cirurgia
 public:
     Cirurgia();
 
-    string getId() const;
-    void setId(const string &value);
+    QString getId() const;
+    void setId(const QString &value);
 
     Paciente *getPaciente() const;
     void setPaciente(Paciente *value);
@@ -27,16 +26,16 @@ public:
     QDate getData() const;
     void setData(const QDate &value);
 
-    string getTipoCirurgia() const;
-    void setTipoCirurgia(const string &value);
+    QString getTipoCirurgia() const;
+    void setTipoCirurgia(const QString &value);
 
 private:
-    string id;
+    QString id;
     Paciente *paciente;
     Medico medico;
     bool marcada;
     QDate data;
-    string tipoCirurgia;
+    QString tipoCirurgia;
 };
 
 #endif // CIRURGIA_H

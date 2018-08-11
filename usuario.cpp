@@ -5,22 +5,22 @@ Usuario::Usuario()
 
 }
 
-string Usuario::getNome() const
+QString Usuario::getNome() const
 {
     return nome;
 }
 
-void Usuario::setNome(const string &value)
+void Usuario::setNome(const QString &value)
 {
     nome = value;
 }
 
-string Usuario::getCpf() const
+QString Usuario::getCpf() const
 {
     return cpf;
 }
 
-void Usuario::setCpf(const string &value)
+void Usuario::setCpf(const QString &value)
 {
     cpf = value;
 }
@@ -30,12 +30,12 @@ int Usuario::getSenhaHash() const
     return senhaHash;
 }
 
-string Usuario::getId() const
+QString Usuario::getId() const
 {
     return id;
 }
 
-void Usuario::setId(const string &value)
+void Usuario::setId(const QString &value)
 {
     id = value;
 }
@@ -50,27 +50,11 @@ void Usuario::setIdade(int value)
     idade = value;
 }
 
-bool Usuario::operator ==(Usuario &b)
+bool Usuario::operator ==(const Usuario* a)
 {
-    if(this->nome != b.nome) {
+    if(cpf == a->cpf) {
+        return true;
+    } else {
         return false;
     }
-
-    if(this->cpf != b.cpf) {
-        return false;
-    }
-
-    if(this->senhaHash != b.senhaHash) {
-        return false;
-    }
-
-    if(this->id != b.id) {
-        return false;
-    }
-
-    if(this->idade != b.idade) {
-        return false;
-    }
-
-    return true;
 }
