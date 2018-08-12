@@ -12,7 +12,9 @@ SOURCES += main.cpp \
     medico.cpp \
     recepcionista.cpp \
     prontuario.cpp \
-    repositoriousuario.cpp
+    repositoriousuario.cpp \
+    consulta.cpp \
+    repositorioconsulta.cpp
 
 HEADERS += \
     usuario.h \
@@ -21,4 +23,6 @@ HEADERS += \
     medico.h \
     recepcionista.h \
     prontuario.h \
-    repositoriousuario.h
+    repositoriousuario.h \
+    consulta.h \
+    repositorioconsulta.h

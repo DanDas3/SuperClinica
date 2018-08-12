@@ -6,11 +6,6 @@ RepositorioUsuario::RepositorioUsuario()
 
 }
 
-RepositorioUsuario::RepositorioUsuario(int n)
-{
-    this->usuarios.resize(n);
-}
-
 RepositorioUsuario::RepositorioUsuario(QVector<Usuario> u)
 {
     this->usuarios = u;
@@ -18,24 +13,47 @@ RepositorioUsuario::RepositorioUsuario(QVector<Usuario> u)
 
 void RepositorioUsuario::cadastrarUsuario(Usuario u)
 {
-    this->usuarios.push_back(u);
+    this->usuarios.append(u);
 }
 
 Usuario* RepositorioUsuario::procurar(QString id)
 {
     int total = usuarios.size();
     bool continuar = true;
-    int i;
+    Usuario *u = 0;
+    int i = 0;
 
-    for (i = 0; i < total && continuar; ++i) {
-        if(usuarios[i].getId() == id) {
-            continuar = false;
-        }
+    i = getPos(id);
+
+    if(i != -1) {
+        u = &usuarios[i];
     }
-    return &usuarios[i];
+    return u;
 }
 
 void RepositorioUsuario::remover(QString id)
 {
-    std::remove(usuarios.begin(), usuarios.end(), this->procurar(id));
+    //std::remove(usuarios.begin(), usuarios.end(), this->procurar(id));
+    int i = getPos(id);
+    if(i != -1) {
+        usuarios.remove(i);
+    }
+}
+
+int RepositorioUsuario::getPos(QString id)
+{
+    int i = 0;
+    int size = usuarios.size();
+    bool continuar = true;
+    while (i < size && continuar) {
+        if(usuarios[i].getId() == id) {
+            continuar = false;
+        } else {
+            i += 1;
+        }
+    }
+    if(continuar) {
+        i = -1;
+    }
+    return i;
 }
