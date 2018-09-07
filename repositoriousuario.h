@@ -13,6 +13,8 @@ public:
     void cadastrarUsuario(Usuario u);
     Usuario* procurar(QString id);
     void remover(QString id);
+    QVector<Usuario> *getDados() const;
+
 private:
     QVector<Usuario> usuarios;
 

@@ -7,6 +7,7 @@ class Recepcionista : public Usuario
 {
 public:
     Recepcionista();
+    ~Recepcionista();
 };
 
 #endif // RECEPCIONISTA_H

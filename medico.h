@@ -3,12 +3,14 @@
 
 #include "usuario.h"
 
-using namespace std;
-
 class Medico : public Usuario
 {
 public:
     Medico();
+    Medico(QString especialidade);
+
+    QString getEspecialidade() const;
+    void setEspecialidade(const QString &value);
 
 private:
     QString especialidade;

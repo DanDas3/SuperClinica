@@ -4,3 +4,8 @@ Recepcionista::Recepcionista()
 {
 
 }
+
+Recepcionista::~Recepcionista()
+{
+
+}

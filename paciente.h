@@ -9,7 +9,7 @@ class Paciente : public Usuario
 {
 public:
     Paciente();
-
+    virtual ~Paciente();
     Cirurgia getCirurgia() const;
     void setCirurgia(const Cirurgia &value);
 

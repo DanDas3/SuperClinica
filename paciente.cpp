@@ -5,6 +5,11 @@ Paciente::Paciente()
 
 }
 
+Paciente::~Paciente()
+{
+
+}
+
 Cirurgia Paciente::getCirurgia() const
 {
     return cirurgia;

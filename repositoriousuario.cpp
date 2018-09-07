@@ -40,6 +40,12 @@ void RepositorioUsuario::remover(QString id)
     }
 }
 
+QVector<Usuario> *RepositorioUsuario::getDados() const
+{
+    QVector<Usuario> *l = new QVector<Usuario>(usuarios);
+    return l;
+}
+
 int RepositorioUsuario::getPos(QString id)
 {
     int i = 0;

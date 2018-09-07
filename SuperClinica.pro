@@ -15,7 +15,8 @@ SOURCES += main.cpp \
     repositoriousuario.cpp \
     consulta.cpp \
     repositorioconsulta.cpp \
-    controladorusuario.cpp
+    controladorusuario.cpp \
+    controladorconsulta.cpp
 
 HEADERS += \
     usuario.h \
@@ -27,4 +28,5 @@ HEADERS += \
     repositoriousuario.h \
     consulta.h \
     repositorioconsulta.h \
-    controladorusuario.h
+    controladorusuario.h \
+    controladorconsulta.h
