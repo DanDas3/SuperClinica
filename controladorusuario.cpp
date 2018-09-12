@@ -4,7 +4,7 @@
 #include <QFile>
 #include <QDebug>
 
-ControladorUsuario* ControladorUsuario::instance = 0;
+/*ControladorUsuario* ControladorUsuario::instance = 0;
 
 ControladorUsuario::ControladorUsuario()
 {
@@ -57,10 +57,10 @@ void ControladorUsuario::salvarDados(QString file)
     delete l;
     f.flush();
     f.close();
-}
+}*/
 
-void ControladorUsuario::carregarDados(QString file)
-{
+/*void ControladorUsuario::carregarDados(QString file)
+{*/
     /*QFile f(file);
 
     if(!f.open(QIODevice::ReadOnly)) {
@@ -76,4 +76,4 @@ void ControladorUsuario::carregarDados(QString file)
     //delete l;
     f.flush();
     f.close();*/
-}
+//}

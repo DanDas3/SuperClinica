@@ -1,28 +1,58 @@
 #ifndef CONTROLADORUSUARIO_H
 #define CONTROLADORUSUARIO_H
 
+#include <QDataStream>
+#include <QFile>
+#include <QDebug>
+
 #include "repositoriousuario.h"
 
 
-
+template <typename T>
 class ControladorUsuario
 {
 public:
 
-    static ControladorUsuario *getInstance();
+    ControladorUsuario() {}
+    virtual ~ControladorUsuario(){}
 
-    void cadastrar(Usuario u);
-    Usuario* procurar(QString id);
-    void remover(QString id);
+    void cadastrar(T u) {
+        repositorio.cadastrarUsuario(u);
+    }
 
-    void salvarDados(QString file);
-    void carregarDados(QString file);
+    T* procurar(QString id) {
+        T* u = repositorio.procurar(id);
+        return u;
+    }
+
+    void remover(QString id) {
+        repositorio.remover(id);
+    }
+
+    void salvarDados(QString file)
+    {
+        QFile f(file);
+
+        if(!f.open(QIODevice::WriteOnly)) {
+            qDebug() << "Nao foi possivel abrir o arquivo";
+            return;
+        }
+
+        QDataStream out(&f);
+        QVector<T> *l = repositorio.getDados();
+        out.setVersion(QDataStream::Qt_5_10);
+        out << l;
+        delete l;
+        f.flush();
+        f.close();
+    }
+
+    void carregarDados(QString file) {
+
+    }
 
 private:
-    ControladorUsuario();
-    static ControladorUsuario *instance;
-    RepositorioUsuario repositorio;
-    virtual ~ControladorUsuario();
+    RepositorioUsuario<T> repositorio;
 };
 
 #endif // CONTROLADORUSUARIO_H
