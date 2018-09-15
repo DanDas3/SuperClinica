@@ -46,6 +46,11 @@ public:
         }
     }
 
+    void atualizar(QString id, T u) {
+        int i = getPos(id);
+        usuarios[i] = u;
+    }
+
 private:
     //QVector<Usuario> usuarios;
     QVector<T> usuarios;

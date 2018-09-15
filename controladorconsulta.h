@@ -14,6 +14,7 @@ public:
     void cadastrar(Consulta c);
     Consulta *procurar(QString id);
     QVector<Consulta>* procurar(QDate data);
+    void atualizar(Consulta c);
     void remover(QString id);
 
 private:

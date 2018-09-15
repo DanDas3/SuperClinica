@@ -28,6 +28,11 @@ QVector<Consulta> *ControladorConsulta::procurar(QDate data)
     return v;
 }
 
+void ControladorConsulta::atualizar(Consulta c)
+{
+    this->repositorio.atualizar(c);
+}
+
 void ControladorConsulta::remover(QString id)
 {
     repositorio.remover(id);

@@ -29,6 +29,10 @@ public:
         repositorio.remover(id);
     }
 
+    void atualizar(QString id, T u) {
+        repositorio.atualizar(id, u);
+    }
+
     void salvarDados(QString file)
     {
         QFile f(file);

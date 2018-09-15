@@ -37,6 +37,12 @@ QVector<Consulta> *RepositorioConsulta::procurar(QDate data)
     return lc;
 }
 
+void RepositorioConsulta::atualizar(Consulta c)
+{
+    int i = this->getPos(c.getId());
+    consultas[i] = c;
+}
+
 void RepositorioConsulta::remover(QString id)
 {
     int i = getPos(id);
