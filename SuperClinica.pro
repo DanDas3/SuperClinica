@@ -30,3 +30,6 @@ HEADERS += \
     repositorioconsulta.h \
     controladorusuario.h \
     controladorconsulta.h
+
+FORMS += \
+    superclinica.ui
