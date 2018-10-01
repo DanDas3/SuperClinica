@@ -18,7 +18,33 @@
     <widget class="QWidget" name="loginWidget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
+       <spacer name="verticalUpSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="loginHorizontalLayout">
+        <item>
+         <spacer name="loginLeftHorizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="loginLabel">
           <property name="text">
@@ -27,7 +53,10 @@
          </widget>
         </item>
         <item>
-         <spacer name="loginHorizontalSpacer">
+         <widget class="QLineEdit" name="loginLineEdit"/>
+        </item>
+        <item>
+         <spacer name="loginRightHorizontalSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -39,13 +68,23 @@
           </property>
          </spacer>
         </item>
-        <item>
-         <widget class="QLineEdit" name="loginLineEdit"/>
-        </item>
        </layout>
       </item>
       <item>
        <layout class="QHBoxLayout" name="passwordHorizontalLayout">
+        <item>
+         <spacer name="passwordLeftHorizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item>
          <widget class="QLabel" name="passwordLabel">
           <property name="text">
@@ -54,7 +93,14 @@
          </widget>
         </item>
         <item>
-         <spacer name="passwordHorizontalSpacer">
+         <widget class="QLineEdit" name="passwordLineEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="passwordRightHorizontalSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -65,13 +111,6 @@
            </size>
           </property>
          </spacer>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="passwordLineEdit">
-          <property name="echoMode">
-           <enum>QLineEdit::Password</enum>
-          </property>
-         </widget>
         </item>
        </layout>
       </item>
@@ -98,6 +137,19 @@
          </widget>
         </item>
        </layout>
+      </item>
+      <item>
+       <spacer name="verticalDownSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
       </item>
      </layout>
     </widget>
